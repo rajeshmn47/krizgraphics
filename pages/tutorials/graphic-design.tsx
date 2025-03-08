@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Layout from "../components/Layout";
+import Link from "next/link";
+import Layout from "../../components/Layout";
 
 const tutorials = [
   {
@@ -46,7 +46,7 @@ export default function GraphicDesignTutorials() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {tutorials.map((tutorial, index) => (
             <Link
-              to={tutorial.link}
+              href={tutorial.link}
               key={index}
               className="block bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow"
             >

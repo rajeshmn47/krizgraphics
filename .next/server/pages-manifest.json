@@ -4,5 +4,5 @@
   "/_document": "pages/_document.js",
   "/services/graphic-design": "pages/services/graphic-design.js",
   "/services/english-training": "pages/services/english-training.js",
-  "/contact": "pages/contact.js"
+  "/": "pages/index.js"
 }
