@@ -1,7 +1,6 @@
 import React from "react";
 import { Star, GraduationCap, Briefcase, Globe } from 'lucide-react';
 import Link from "next/link";
-import Layout from '../../components/Layout';
 
 export default function EnglishTraining() {
   const programs = [

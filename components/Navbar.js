@@ -103,7 +103,7 @@ function NavbarWithDropdowns() {
 
           {/* Tutorials Dropdown */}
           <li
-            className="relative mb-2 md:mb-0 md:ml-4 lg:ml-6"
+            className="relative mb-2 md:mb-0 md:ml-4 lg:ml-6 hidden"
             onMouseEnter={() => openDropdown("tutorials")}
             onMouseLeave={closeDropdown}
           >

@@ -2,7 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/": "pages/index.js",
   "/services/graphic-design": "pages/services/graphic-design.js",
-  "/services/english-training": "pages/services/english-training.js",
-  "/": "pages/index.js"
+  "/services/photo-editing": "pages/services/photo-editing.js"
 }
