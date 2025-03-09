@@ -1,8 +1,28 @@
 import React from "react";
 import Layout from "../components/Layout";
+import { NextSeo } from 'next-seo';
 
 export default function About() {
     return (
+        <>
+            <NextSeo
+                title="About Us | KRIZ Graphics"
+                description="Learn more about KRIZ Graphics, your trusted partner in professional graphic design, photo editing, and creative solutions. Discover who we are, our mission, and what we do."
+                openGraph={{
+                    title: 'About Us | KRIZ Graphics',
+                    description: 'Learn more about KRIZ Graphics, your trusted partner in professional graphic design, photo editing, and creative solutions. Discover who we are, our mission, and what we do.',
+                    url: 'https://www.krizgraphics.com/about',
+                    type: 'article',
+                    images: [
+                        {
+                            url: 'https://www.krizgraphics.com/images/about-us.jpg',
+                            width: 1200,
+                            height: 630,
+                            alt: 'About KRIZ Graphics',
+                        },
+                    ],
+                }}
+            />
             <section className="bg-gradient-to-b from-indigo-900 via-purple-800 to-pink-900 text-white py-16">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12">
@@ -25,5 +45,6 @@ export default function About() {
                     </div>
                 </div>
             </section>
-    )
+        </>
+    );
 }

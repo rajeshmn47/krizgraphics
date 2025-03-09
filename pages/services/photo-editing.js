@@ -1,28 +1,28 @@
 import React from "react";
-import Layout from "../../components/Layout";
+import { NextSeo } from 'next-seo';
 
 export default function PhotoEditingServicesPage() {
   const techniques = [
     {
-      "title": "Adding Patterns",
-      "description": "Learn how to add seamless patterns to your images to enhance the background or create a unique texture.",
-      "imageBefore": "../images/Adding Patterns.jpg",
-      "imageAfter": "../images/Adding Patterns After.jpg",
-      "category": "creative"
+      title: "Adding Patterns",
+      description: "Learn how to add seamless patterns to your images to enhance the background or create a unique texture.",
+      imageBefore: "../images/Adding Patterns.jpg",
+      imageAfter: "../images/Adding Patterns After.jpg",
+      category: "creative"
     },
     {
-      "title": "Perfect Shadow",
-      "description": "Create realistic and soft shadows for objects to make them look naturally integrated into the scene.",
-      "imageBefore": "../images/Perfect Shadow.jpg",
-      "imageAfter": "../images/Perfect Shadow After.jpg",
-      "category": "product"
+      title: "Perfect Shadow",
+      description: "Create realistic and soft shadows for objects to make them look naturally integrated into the scene.",
+      imageBefore: "../images/Perfect Shadow.jpg",
+      imageAfter: "../images/Perfect Shadow After.jpg",
+      category: "product"
     },
     {
-      "title": "Double Exposure",
-      "description": "Combine two images to create a surreal double exposure effect by blending them creatively.",
-      "imageBefore": "../images/doubleExposure.jpg",
-      "imageAfter": "../images/doubleExposure.jpg",
-      "category": "creative"
+      title: "Double Exposure",
+      description: "Combine two images to create a surreal double exposure effect by blending them creatively.",
+      imageBefore: "../images/doubleExposure.jpg",
+      imageAfter: "../images/doubleExposure.jpg",
+      category: "creative"
     },
     {
       title: "Cut hair",
@@ -242,9 +242,26 @@ export default function PhotoEditingServicesPage() {
     }
   ];
 
-
   return (
-    <div>
+    <>
+      <NextSeo
+        title="Photo Editing Services | Kriz Graphics"
+        description="Enhance your photos with our professional photo editing and retouching services. From color correction to advanced image manipulation, we bring out the best in your visuals."
+        openGraph={{
+          title: 'Photo Editing Services | Kriz Graphics',
+          description: 'Enhance your photos with our professional photo editing and retouching services. From color correction to advanced image manipulation, we bring out the best in your visuals.',
+          url: 'https://www.krizgraphics.com/services/photo-editing',
+          type: 'article',
+          images: [
+            {
+              url: 'https://www.krizgraphics.com/images/photo-editing.jpg',
+              width: 1200,
+              height: 630,
+              alt: 'Photo Editing Services',
+            },
+          ],
+        }}
+      />
       <div className="bg-gray-50 py-24 px-2 sm:px-96">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold text-center text-red-900 mb-8">Photo Editing Services</h1>
@@ -267,6 +284,6 @@ export default function PhotoEditingServicesPage() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

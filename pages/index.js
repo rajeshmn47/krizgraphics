@@ -15,11 +15,10 @@ function Home() {
         <meta name="description" content="Professional Graphics Design, Photo Editing, and Digital Solutions" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <Hero />
+      <Portfolio />
       <WhyChooseUs />
       <Features />
-      <Portfolio />
       <Testimonials />
       <Contact />
     </div>

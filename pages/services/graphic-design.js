@@ -1,4 +1,5 @@
 import React from "react";
+import { NextSeo } from 'next-seo';
 import Layout from '../../components/Layout';
 
 export default function GraphicsDesignServices() {
@@ -64,41 +65,61 @@ export default function GraphicsDesignServices() {
     ];
 
     return (
-        <div>
-            <header className="bg-blue-600 text-white text-center py-12">
-                <h1 className="text-4xl font-bold">Graphic Design Services</h1>
-                <p className="text-lg mt-4">We transform ideas into creative visuals that bring your brand to life.</p>
-            </header>
-            <section className="py-16 bg-gray-100">
-                <div className="max-w-3xl mx-auto text-center mb-12">
-                    <h2 className="text-3xl font-bold">What We Offer</h2>
-                    <p className="text-lg text-gray-700 mt-4">Explore our comprehensive range of graphic design services designed to cater to diverse business needs.</p>
-                </div>
-                <div className="space-y-12 px-4">
-                    {services.map((service, index) => (
-                        <div key={index} className="bg-white p-8 rounded-lg shadow-md">
-                            <div className="flex flex-col md:flex-row items-center">
-                                <img
-                                    src={service.image}
-                                    alt={service.title}
-                                    className="w-full md:w-1/2 min-h-96 h-auto object-contain rounded-lg mb-6 md:mb-0"
-                                />
-                                <div className="md:ml-8">
-                                    <h3 className="text-2xl font-semibold text-gray-800">{service.title}</h3>
-                                    <p className="mt-4 text-gray-600">{service.description}</p>
+        <>
+            <NextSeo
+                title="Graphic Design Services | Kriz Graphics"
+                description="Explore our comprehensive range of graphic design services designed to cater to diverse business needs. From product package design to social media graphics, we bring your vision to life."
+                openGraph={{
+                    title: 'Graphic Design Services | Kriz Graphics',
+                    description: 'Explore our comprehensive range of graphic design services designed to cater to diverse business needs. From product package design to social media graphics, we bring your vision to life.',
+                    url: 'https://www.krizgraphics.com/services/graphic-design',
+                    type: 'article',
+                    images: [
+                        {
+                            url: 'https://www.krizgraphics.com/images/graphic-design.jpg',
+                            width: 1200,
+                            height: 630,
+                            alt: 'Graphic Design Services',
+                        },
+                    ],
+                }}
+            />
+            <div>
+                <header className="bg-blue-600 text-white text-center py-12">
+                    <h1 className="text-4xl font-bold">Graphic Design Services</h1>
+                    <p className="text-lg mt-4">We transform ideas into creative visuals that bring your brand to life.</p>
+                </header>
+                <section className="py-16 bg-gray-100">
+                    <div className="max-w-3xl mx-auto text-center mb-12">
+                        <h2 className="text-3xl font-bold">What We Offer</h2>
+                        <p className="text-lg text-gray-700 mt-4">Explore our comprehensive range of graphic design services designed to cater to diverse business needs.</p>
+                    </div>
+                    <div className="space-y-12 px-4">
+                        {services.map((service, index) => (
+                            <div key={index} className="bg-white p-8 rounded-lg shadow-md">
+                                <div className="flex flex-col md:flex-row items-center">
+                                    <img
+                                        src={service.image}
+                                        alt={service.title}
+                                        className="w-full md:w-1/2 min-h-96 h-auto object-contain rounded-lg mb-6 md:mb-0"
+                                    />
+                                    <div className="md:ml-8">
+                                        <h3 className="text-2xl font-semibold text-gray-800">{service.title}</h3>
+                                        <p className="mt-4 text-gray-600">{service.description}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
-                </div>
-            </section>
-            <section className="py-16 bg-blue-600 text-white text-center">
-                <h2 className="text-3xl font-bold">Ready to Get Started?</h2>
-                <p className="text-lg mt-4">Let us bring your vision to life with designs that speak volumes about your brand.</p>
-                <a href="#contact" className="mt-6 inline-block px-6 py-3 bg-white text-blue-600 font-semibold rounded-md">
-                    Start a Project
-                </a>
-            </section>
-        </div>
+                        ))}
+                    </div>
+                </section>
+                <section className="py-16 bg-blue-600 text-white text-center">
+                    <h2 className="text-3xl font-bold">Ready to Get Started?</h2>
+                    <p className="text-lg mt-4">Let us bring your vision to life with designs that speak volumes about your brand.</p>
+                    <a href="#contact" className="mt-6 inline-block px-6 py-3 bg-white text-blue-600 font-semibold rounded-md">
+                        Start a Project
+                    </a>
+                </section>
+            </div>
+        </>
     );
 }
