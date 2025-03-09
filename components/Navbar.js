@@ -34,7 +34,7 @@ function NavbarWithDropdowns() {
       <div className={`container mx-auto flex  ${menuOpen?'flex-col':'justify-between items-center'} es-center`}>
         <div className="flex justify-between items-center w-full">
         <h1 className="text-xl font-bold">
-          <img src='./logo.png' alt='' className="w-24 h-8"/>
+          <img src='./logo.png' alt='' className="w-24 h-8 cover"/>
         </h1>
 
         {/* Mobile Hamburger Button */}

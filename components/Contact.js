@@ -1,7 +1,23 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import emailjs from 'emailjs-com';
 
 function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_USER_ID')
+      .then((result) => {
+          console.log(result.text);
+          alert('Message sent successfully!');
+      }, (error) => {
+          console.log(error.text);
+          alert('Failed to send message. Please try again later.');
+      });
+  };
+
   return (
     <div className="bg-gray-50 py-24" id="contact">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -11,32 +27,38 @@ function Contact() {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="bg-white rounded-xl shadow-sm p-8">
-            <form className="space-y-6">
+            <form ref={form} onSubmit={sendEmail} className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
                 <input
                   type="text"
+                  name="user_name"
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   placeholder="Your name"
+                  required
                 />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
                 <input
                   type="email"
+                  name="user_email"
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   placeholder="your@email.com"
+                  required
                 />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
                 <textarea
+                  name="message"
                   rows={4}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   placeholder="Tell us about your project"
+                  required
                 />
               </div>
-              <button className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors">
+              <button type="submit" className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors">
                 Send Message
               </button>
             </form>

@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "emailjs-com": "^3.2.0",
     "lucide-react": "^0.477.0",
     "next": "latest",
     "react": "latest",

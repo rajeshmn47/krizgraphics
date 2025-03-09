@@ -3,6 +3,6 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/services/graphic-design": "pages/services/graphic-design.js",
+  "/about": "pages/about.js",
   "/services/photo-editing": "pages/services/photo-editing.js"
 }
