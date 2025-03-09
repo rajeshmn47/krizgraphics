@@ -2,7 +2,9 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/services/photo-editing": "pages/services/photo-editing.js",
   "/": "pages/index.js",
   "/about": "pages/about.js",
-  "/services/photo-editing": "pages/services/photo-editing.js"
+  "/contact": "pages/contact.js",
+  "/services/whatsapp-wedding-invitations": "pages/services/whatsapp-wedding-invitations.js"
 }

@@ -20,8 +20,8 @@ export default function PhotoEditingServicesPage() {
     {
       "title": "Double Exposure",
       "description": "Combine two images to create a surreal double exposure effect by blending them creatively.",
-      "imageBefore": "../images/Double Exposure.jpg",
-      "imageAfter": "../images/Double Exposure After.jpg",
+      "imageBefore": "../images/doubleExposure.jpg",
+      "imageAfter": "../images/doubleExposure.jpg",
       "category": "creative"
     },
     {
